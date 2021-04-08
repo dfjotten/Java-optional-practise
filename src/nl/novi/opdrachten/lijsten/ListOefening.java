@@ -3,6 +3,7 @@ package nl.novi.opdrachten.lijsten;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Collections;
 
 public class ListOefening {
 
@@ -31,16 +32,25 @@ public class ListOefening {
             System.out.println(i + " - " + clubNames.get(i));
         }
 
-//      This stupid shit doesnt count an index (i)
+//      This shit doesnt count an index (i)
 //      for (String element : clubNames) {
 //      System.out.println(element);
 //        }
 
         // Vraag 1: Maak een methode die checkt of een club al in de lijst zit en voeg deze anders toe.
 
+        if (clubNames.contains("AA Aachen")) {
+            System.out.println("Club zit al in de lijst");
+        } else {
+            clubNames.add("AA Aachen");
+        }
 
+        clubNames.forEach(System.out::println);
 
         // Vraag 2: Maak een methode die de positie van de club in de lijst teruggeeft.
+
+        int index = clubNames.indexOf("PSV");
+        System.out.println(index);
 
         // Vraag 3: Maak een methode die de lijst alfabetisch sorteert. Wanneer Ajax niet op positie 1 staat, moeten de
         // clubs die voor Ajax staan verwijderd worden.
@@ -48,6 +58,8 @@ public class ListOefening {
         clubNames.add("AA Aachen");
         clubNames.add("AFC Amsterdam");
         clubNames.add("AFC");
+
+        
 
 
         // Vraag 4: Kun je hetzelfde doen als hierboven, maar PSV moet dan laatste zijn.
